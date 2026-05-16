@@ -29,6 +29,14 @@ http://127.0.0.1:4173/sop-card.html
 
 No build step, backend, API key, or framework is required.
 
+## Online
+
+```text
+https://zengheisenberg-bit.github.io/sanqingshi-product/
+https://zengheisenberg-bit.github.io/sanqingshi-product/advisor.html
+https://zengheisenberg-bit.github.io/sanqingshi-product/sop-card.html
+```
+
 ## Scope Guardrails
 
 Do not add internal/customer mode switching, customer-specific share links, long-image generation, recommendation statistics, search, sorting, price sliders, offline mode, Feishu API sync, or cloud deployment during MVP v2.0.

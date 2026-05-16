@@ -2,6 +2,7 @@
 
 ## 已部署
 
+- GitHub Pages: `https://zengheisenberg-bit.github.io/sanqingshi-product/`
 - `gift_boxes`：10 条记录，含 2 条茶饼礼盒。
 - `询单收集`：飞书表单已创建，关键字段已设置为必填。
 - `index.html`：选品台从 `data.json` 加载数据。
@@ -33,4 +34,12 @@ python3 -m http.server 4173 -d montique-mvp
 http://127.0.0.1:4173/index.html
 http://127.0.0.1:4173/advisor.html
 http://127.0.0.1:4173/sop-card.html
+```
+
+线上访问：
+
+```text
+https://zengheisenberg-bit.github.io/sanqingshi-product/
+https://zengheisenberg-bit.github.io/sanqingshi-product/advisor.html
+https://zengheisenberg-bit.github.io/sanqingshi-product/sop-card.html
 ```
