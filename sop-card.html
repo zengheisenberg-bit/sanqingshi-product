@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Montique 山沁时 · toB 询单 SOP 卡</title>
+  <style>
+    :root {
+      --ink: #1F2A2E;
+      --mist: #F5F2EC;
+      --sand: #E8E1D4;
+      --amber: #B8895A;
+      --pine: #3D4F3A;
+      --divider: #D8D0C2;
+      --font: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      margin: 0;
+      color: var(--ink);
+      background: var(--mist);
+      font-family: var(--font);
+      letter-spacing: 0;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--mist);
+    }
+
+    .page {
+      width: min(100vw, 1123px);
+      min-height: 794px;
+      margin: 0 auto;
+      padding: 28px;
+      background: var(--mist);
+    }
+
+    .card {
+      min-height: 738px;
+      padding: 26px 30px;
+      border: 1px solid var(--divider);
+      background: #FBF8F1;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .brand {
+      color: var(--pine);
+      font-size: 15px;
+      line-height: 1.5;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .step {
+      min-height: 328px;
+      padding: 16px 14px;
+      border: 1px solid var(--divider);
+      background: var(--sand);
+    }
+
+    .step strong {
+      display: block;
+      color: var(--amber);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .step h2 {
+      margin: 8px 0 12px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .step p,
+    .step li {
+      color: #4F5754;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .step p {
+      margin: 0 0 10px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 17px;
+    }
+
+    .redlines {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border: 1px solid rgba(184, 137, 90, 0.45);
+      background: rgba(184, 137, 90, 0.09);
+    }
+
+    .redlines h2 {
+      margin: 0 0 10px;
+      color: var(--ink);
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .redline-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .redline-grid div {
+      color: #5D4230;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .footer {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      color: #6B6B6B;
+      font-size: 12px;
+    }
+
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 0;
+      }
+
+      .page {
+        width: 297mm;
+        min-height: 210mm;
+        padding: 8mm;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="header">
+        <h1>Montique · toB 询单 5 步标准动作</h1>
+        <div class="brand">山沁时<br>仅供内部使用</div>
+      </header>
+
+      <section class="steps" aria-label="询单五步 SOP">
+        <article class="step">
+          <strong>T+0</strong>
+          <h2>2 小时内回复</h2>
+          <p>工作时段内首次回复，确认用途、预算、数量和交付时间。</p>
+          <p>话术：您好，我是 Montique 的顾问，已收到您的询单，请问方便简单聊一下具体需求吗？</p>
+          <p>非工作时段：已收到询单，明早 9 点前给您方案。急单请直接微信我。</p>
+        </article>
+
+        <article class="step">
+          <strong>T+1</strong>
+          <h2>24 小时内发方案</h2>
+          <ul>
+            <li>打开选品台按需求筛选。</li>
+            <li>截图 3-5 款合适礼盒。</li>
+            <li>询问客户哪个方向更对。</li>
+          </ul>
+        </article>
+
+        <article class="step">
+          <strong>T+2</strong>
+          <h2>48 小时内跟进</h2>
+          <ul>
+            <li>优先电话或语音。</li>
+            <li>问客户更喜欢哪个方向。</li>
+            <li>确认顾虑：预算、交期、定制、茶品。</li>
+          </ul>
+        </article>
+
+        <article class="step">
+          <strong>T+3</strong>
+          <h2>72 小时报价</h2>
+          <ul>
+            <li>报价单包含单价和总价。</li>
+            <li>说明定制费、打样费、交期和付款方式。</li>
+            <li>大单超过 100 盒建议先寄样。</li>
+          </ul>
+        </article>
+
+        <article class="step">
+          <strong>T+5</strong>
+          <h2>7 天内闭单留档</h2>
+          <ul>
+            <li>成交：约定生产排期。</li>
+            <li>未成交：礼貌询问原因。</li>
+            <li>有价值客户半年后回访。</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="redlines">
+        <h2>红线</h2>
+        <div class="redline-grid">
+          <div>不主动报最低价</div>
+          <div>不承诺今晚出货</div>
+          <div>超过 10% 折扣必须确认</div>
+          <div>不公开客户案例</div>
+          <div>不用淘宝式称呼</div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>Montique · 山沁时 · 带茶去旷野</span>
+        <span>打印规格：A4 横版</span>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Montique 山沁时 · 礼赠顾问</title>
+  <script>
+    const CONFIG = {
+      advisor_name: "李某",
+      advisor_title: "礼赠顾问",
+      advisor_tagline: "在路上的人，喝在路上的茶",
+      advisor_avatar: "./assets/advisor-li.jpg",
+      advisor_wechat: "shanqinshi_li",
+      advisor_qr: "./assets/qr-li.png",
+      inquiry_form_url: "https://ccni7miiwrh3.feishu.cn/share/base/form/shrcnFBuojqdY0XmFZ9VSgoeI5c?source=mingpian"
+    };
+  </script>
+  <style>
+    :root {
+      --ink: #1F2A2E;
+      --mist: #F5F2EC;
+      --sand: #E8E1D4;
+      --amber: #B8895A;
+      --pine: #3D4F3A;
+      --text-1: #1F2A2E;
+      --text-2: #6B6B6B;
+      --text-3: #A0A0A0;
+      --divider: #E5E0D6;
+      --font: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --fs-lg: 22px;
+      --fs-md: 16px;
+      --fs-sm: 14px;
+      --fs-xs: 12px;
+      --gap: 16px;
+      --gap-sm: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--mist);
+      color: var(--text-1);
+      font-family: var(--font);
+      letter-spacing: 0;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--mist);
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero {
+      min-height: 220px;
+      max-height: 30vh;
+      padding: 34px 22px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: #fff;
+      background: linear-gradient(135deg, #3D4F3A 0%, #1F2A2E 100%);
+    }
+
+    .brand {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .brand-sub {
+      margin: 8px 0 0;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: var(--fs-md);
+      font-weight: 400;
+    }
+
+    .profile {
+      padding: 0 22px;
+      text-align: center;
+    }
+
+    .avatar-wrap {
+      width: 88px;
+      height: 88px;
+      margin: -44px auto 14px;
+      padding: 4px;
+      background: var(--mist);
+      border-radius: 999px;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      color: #fff;
+      background: var(--pine);
+      border-radius: 999px;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .avatar img.is-missing {
+      display: none;
+    }
+
+    .advisor-name {
+      margin: 0;
+      color: var(--text-1);
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .tagline {
+      max-width: 260px;
+      margin: 8px auto 0;
+      color: var(--text-2);
+      font-size: var(--fs-sm);
+      line-height: 1.6;
+    }
+
+    .section {
+      padding: 24px 22px 0;
+    }
+
+    .section h2 {
+      margin: 0 0 14px;
+      color: var(--text-1);
+      font-size: var(--fs-md);
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .promise-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .promise-list li {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 8px;
+      color: var(--text-2);
+      font-size: var(--fs-sm);
+      line-height: 1.6;
+    }
+
+    .promise-list li::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      margin-top: 7px;
+      border: 1px solid var(--pine);
+      border-radius: 999px;
+      background: var(--pine);
+    }
+
+    .cta-block {
+      padding: 24px 22px 0;
+      text-align: center;
+    }
+
+    .primary {
+      width: 100%;
+      min-height: 48px;
+      color: #fff;
+      background: var(--ink);
+      border: 1px solid var(--ink);
+      border-radius: 8px;
+      font-size: var(--fs-md);
+      font-weight: 500;
+    }
+
+    .qr-label {
+      margin: 18px 0 10px;
+      color: var(--text-2);
+      font-size: var(--fs-sm);
+    }
+
+    .qr {
+      width: 132px;
+      height: 132px;
+      margin: 0 auto;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid var(--divider);
+      border-radius: 8px;
+      color: var(--text-3);
+      font-size: var(--fs-xs);
+      line-height: 1.4;
+    }
+
+    .qr img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .qr img.is-missing {
+      display: none;
+    }
+
+    .wechat {
+      margin: 8px 0 0;
+      color: var(--text-3);
+      font-size: var(--fs-xs);
+    }
+
+    .about {
+      margin-top: 24px;
+      padding: 22px;
+      border-top: 1px solid var(--divider);
+      color: var(--text-2);
+      font-size: var(--fs-sm);
+      line-height: 1.7;
+    }
+
+    .about h2 {
+      margin: 0 0 8px;
+      color: var(--text-1);
+      font-size: var(--fs-md);
+      font-weight: 500;
+    }
+
+    .about p {
+      margin: 0;
+    }
+
+    @media (min-width: 720px) {
+      .page {
+        max-width: 430px;
+        min-height: auto;
+        margin: 32px auto;
+        border: 1px solid var(--divider);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1 class="brand">Montique 山沁时</h1>
+      <p class="brand-sub">带茶去旷野</p>
+    </section>
+
+    <section class="profile">
+      <div class="avatar-wrap">
+        <div class="avatar" id="avatarFallback">
+          <img id="advisorAvatar" alt="">
+          <span id="avatarInitial">山</span>
+        </div>
+      </div>
+      <h2 class="advisor-name" id="advisorName"></h2>
+      <p class="tagline" id="advisorTagline"></p>
+    </section>
+
+    <section class="section">
+      <h2>我能帮你做的三件事</h2>
+      <ul class="promise-list">
+        <li>50+ 款礼盒 30 分钟出方案</li>
+        <li>商务 / 节日 / 答谢 全场景</li>
+        <li>支持定制 Logo / 刻字</li>
+      </ul>
+    </section>
+
+    <section class="cta-block">
+      <button class="primary" type="button" id="inquiryButton">立即询单 →</button>
+      <p class="qr-label">或扫码加微信</p>
+      <div class="qr">
+        <img id="advisorQr" alt="顾问微信二维码">
+        <span>二维码<br>待替换</span>
+      </div>
+      <p class="wechat" id="advisorWechat"></p>
+    </section>
+
+    <section class="about">
+      <h2>关于 Montique</h2>
+      <p>福建政和高山生态茶园。日晒萎凋 · 无农药种植。</p>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('advisorName').textContent = `${CONFIG.advisor_name} · ${CONFIG.advisor_title}`;
+    document.getElementById('advisorTagline').textContent = `“${CONFIG.advisor_tagline}”`;
+    document.getElementById('advisorWechat').textContent = `微信号：${CONFIG.advisor_wechat}`;
+
+    const avatar = document.getElementById('advisorAvatar');
+    avatar.src = CONFIG.advisor_avatar;
+    avatar.alt = CONFIG.advisor_name;
+    avatar.addEventListener('error', () => avatar.classList.add('is-missing'));
+
+    const qr = document.getElementById('advisorQr');
+    qr.src = CONFIG.advisor_qr;
+    qr.addEventListener('error', () => qr.classList.add('is-missing'));
+
+    document.getElementById('inquiryButton').addEventListener('click', () => {
+      window.location.href = CONFIG.inquiry_form_url;
+    });
+  </script>
+</body>
+</html>
